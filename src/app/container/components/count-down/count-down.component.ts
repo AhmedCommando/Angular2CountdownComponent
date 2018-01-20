@@ -43,17 +43,15 @@ export class CountDownComponent implements OnInit {
         this.format += ' ss Seconds ';
       }
     });
-    // this.endDate = new Date(this.endDate);
-    // this.startDate = new Date();
-    // const timeDiff = Math.abs(this.startDate - this.endDate);
-    // const dss = new Date(timeDiff);
     this.timer = setInterval(() => {
-      this.countdown = this.msToTime();
+      this.countdown = this.countDownCalculator();
     }, 1000);
   }
 
-
-  msToTime() {
+/**
+ * Calculate the distance between the current time and the whished time
+ */
+  countDownCalculator() {
     const now = new Date().getTime();
     const distance = new Date(this.endDate).getTime() - now;
     if (distance < 0) {
@@ -64,7 +62,6 @@ export class CountDownComponent implements OnInit {
                         .replace('mm', '0')
                         .replace('ss', '0');
     }
-    // Time calculations for days, hours, minutes and seconds
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
