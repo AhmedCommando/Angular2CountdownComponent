@@ -17,6 +17,9 @@ export class CountDownComponent implements OnInit {
   @Input()
   endDate: any;
 
+  @Input()
+  style: any;
+
   @Output()
   onfinish = new EventEmitter();
 

@@ -1,6 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <app-count-down endDate="2018-01-20 19:15"
+  <app-count-down [style]="stylesObj"
+                  endDate="2018-01-20 19:15"
                   units="d:h:m:s"
                   (onfinish)="CountdownFinished($event)"></app-count-down>
 </div>

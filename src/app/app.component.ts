@@ -7,9 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-
+  stylesObj = {
+    'font-size': '1.5em',
+    'color': 'blue'
+  };
   CountdownFinished(event) {
-    console.log('ok')
-    alert('END');
+    alert('Done!');
   }
 }
