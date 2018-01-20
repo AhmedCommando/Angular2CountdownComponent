@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 # CountDown
+
 This is a customizable easy to use Angular2/4 Countdown component.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.3.
 
